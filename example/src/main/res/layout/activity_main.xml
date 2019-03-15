@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.nacro.indent.IndentationTextLayout
+        android:id="@+id/itl_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:array_text="@array/sample1"
+        app:label_style="dot"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <com.nacro.indent.IndentationTextLayout
+            android:id="@+id/itl_sub1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            app:array_text="@array/sub_content1"
+            app:label_color="@color/colorAccent"
+            app:sub_text_of_label="1"
+            >
+
+        </com.nacro.indent.IndentationTextLayout>
+
+        <com.nacro.indent.IndentationTextLayout
+            android:id="@+id/itl_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            app:sub_text_of_label="2"
+            >
+
+        </com.nacro.indent.IndentationTextLayout>
+    </com.nacro.indent.IndentationTextLayout>
+</android.support.constraint.ConstraintLayout>

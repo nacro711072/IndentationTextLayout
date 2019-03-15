@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IndentationTextLayout">
+        <attr name="array_text" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="label_style">
+            <flag name="none" value="-1"/>
+            <flag name="number" value="0"/>
+            <flag name="dot" value="1"/>
+            <flag name="letter" value="2"/>
+            <flag name="parentheses_number" value="3"/>
+            <flag name="chinese_dayton_number" value="4"/>
+            <flag name="chinese_parentheses_number" value="5"/>
+        </attr>
+        <attr name="sub_text_of_label" format="integer"/>
+        <attr name="leading_margin" format="integer"/>
+        <attr name="text_attr" format="reference"/>
+        <attr name="label_color" format="color"/>
+    </declare-styleable>
+
+</resources>
