@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IndentationTextLayout</string>
+
+    <string-array name="sample1">
+        <item>item1</item>
+        <item>generate by programming</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+
+    <string-array name="sub_content1">
+        <item>子項目1</item>
+        <item>子項目2</item>
+        <item>子項目3</item>
+        <item>子項目4</item>
+    </string-array>
+
+</resources>
