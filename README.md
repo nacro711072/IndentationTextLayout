@@ -1,7 +1,7 @@
 # IndentationTextLayout
 
 android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版畫面。
-![Main screen](/screenshots/main_screen.PNG)
+![Main screen](/screenshot/main_screen.PNG)
 
 # Feature
  - 快速生成具有縮排效果的文字
