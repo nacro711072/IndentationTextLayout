@@ -9,41 +9,25 @@ android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版�
  - 能遞迴顯示清單內容
 
 # Usage
-在需要的xml裡加入 `com.nacro.indent.IndentationTextLayout` :
-```xml
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <com.nacro.indent.IndentationTextLayout
-        android:id="@+id/itl_sample"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        app:array_text="@array/sample1"
-        app:label_style="dot"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        >
+### gradle
+```groovy
+allprojects {
+    repositories {
+        maven {
+            url 'https://dl.bintray.com/nacro711072/android'
+        }
+    }
+}
 
-    </com.nacro.indent.IndentationTextLayout>
-</android.support.constraint.ConstraintLayout>
+dependencies {
+    implementation 'com.github.nacro:indent:1.0.0'
+}
+
 ```
-其中`@array/sample1`可以在你的resource裡設置, 比如`strings.xml`: 
-```xml
-<string-array name="sample1">
-    <item>item1</item>
-    <item>item2</item>
-    <item>item3</item>
-    <item>item4</item>
-</string-array>
-```
+
 ### IndentationTextLayout
+
 以下是 IndentationTextLayout 可以設置的所有屬性
 ```xml
         <com.nacro.indent.IndentationTextLayout
@@ -61,6 +45,54 @@ android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版�
         </com.nacro.indent.IndentationTextLayout>
 ```
 
+在需要的layout裡加入 `com.nacro.indent.IndentationTextLayout` :
+```xml
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.nacro.indent.IndentationTextLayout
+        android:id="@+id/itl_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:array_text="@array/sample1"
+        app:label_style="dot"
+        app:text_attr="@layout/indent_text_style"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+    </com.nacro.indent.IndentationTextLayout>
+</android.support.constraint.ConstraintLayout>
+```
+其中`@array/sample1`可以在你的resource裡設置, 比如`strings.xml`: 
+```xml
+<string-array name="sample1">
+    <item>item1</item>
+    <item>item2</item>
+    <item>item3</item>
+    <item>item4</item>
+</string-array>
+```
+而`app:text_attr="@layout/indent_text_style"`指定的layout裡只放一個`TextView`,用來設定文字的樣式,比如
+```xml
+<TextView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/holo_blue_dark"
+    tools:text="樣式"/>
+```
 
 # License
 ```
