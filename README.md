@@ -6,7 +6,7 @@ android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版�
 # Feature
  - 快速生成具有縮排效果的文字
  - 支持多種排序樣式
- - 能遞迴排序
+ - 能遞迴顯示清單內容
 
 # Usage
 在需要的xml裡加入 `com.nacro.indent.IndentationTextLayout` :
@@ -42,6 +42,23 @@ android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版�
     <item>item3</item>
     <item>item4</item>
 </string-array>
+```
+### IndentationTextLayout
+以下是 IndentationTextLayout 可以設置的所有屬性
+```xml
+        <com.nacro.indent.IndentationTextLayout
+            android:id="@+id/itl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="title"
+            app:text_attr="@layout/indent_text_style"
+            app:label_style="chinese_dayton_number"
+            app:label_color="@color/black"
+            app:sub_text_of_label="1"
+            app:array_text="@array/sub_content4"
+            app:leading_margin="24">
+            
+        </com.nacro.indent.IndentationTextLayout>
 ```
 
 
