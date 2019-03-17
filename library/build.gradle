@@ -1,9 +1,31 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'IndentationText'
+    bintrayName = 'IndentationTextLayout'
+
+    publishedGroupId = 'com.github.nacro'
+    libraryName = 'indent'
+    artifact = 'indent'
+
+    libraryDescription = 'A component to indent text with label on Android'
+
+    siteUrl = 'https://github.com/nacro711072/IndentationTextLayout'
+    gitUrl = 'https://github.com/nacro711072/IndentationTextLayout.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'nacro'
+    developerName = 'Chia-Yang Hsu'
+    developerEmail = 'nacro711072@yahoo.com.tw'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 14
@@ -32,3 +54,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
