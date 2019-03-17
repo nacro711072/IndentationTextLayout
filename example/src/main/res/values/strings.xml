@@ -15,4 +15,15 @@
         <item>子項目4</item>
     </string-array>
 
+    <string-array name="sub_content3">
+        <item>可藉由text_attr設置textview屬性</item>
+        <item>句子很長或是文字字體較大時,句子斷行,次行依舊能對齊</item>
+        <item>子項目4</item>
+    </string-array>
+
+    <string-array name="sub_content4">
+        <item>也可以更改縮排寬度</item>
+        <item>句子很長或是文字字體較大時,句子斷行,次行依舊能對齊</item>
+    </string-array>
+
 </resources>

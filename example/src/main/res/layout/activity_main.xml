@@ -40,7 +40,33 @@
             android:padding="8dp"
             app:sub_text_of_label="2"
             >
+        </com.nacro.indent.IndentationTextLayout>
 
+        <com.nacro.indent.IndentationTextLayout
+            android:id="@+id/itl_sub3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            app:text_attr="@layout/indent_text_style"
+            app:label_style="letter"
+            app:sub_text_of_label="3"
+            app:array_text="@array/sub_content3"
+            >
+        </com.nacro.indent.IndentationTextLayout>
+
+        <com.nacro.indent.IndentationTextLayout
+            android:id="@+id/itl_sub4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="8dp"
+            app:text_attr="@layout/indent_text_style"
+            app:label_style="chinese_dayton_number"
+            app:sub_text_of_label="4"
+            app:array_text="@array/sub_content4"
+            app:leading_margin="50"
+            >
         </com.nacro.indent.IndentationTextLayout>
     </com.nacro.indent.IndentationTextLayout>
 </android.support.constraint.ConstraintLayout>
