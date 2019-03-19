@@ -14,9 +14,7 @@ android 元件, 可以自動排序且縮排, 快速生成簡單的文字排版�
 ```groovy
 allprojects {
     repositories {
-        maven {
-            url 'https://dl.bintray.com/nacro711072/android'
-        }
+        jcenter()
     }
 }
 
@@ -44,6 +42,16 @@ dependencies {
             
         </com.nacro.indent.IndentationTextLayout>
 ```
+
+attr          | type  | detail 
+--------------|:-----:|-----| 
+title        | string |  標題 |    
+text_attr    | reference |  文字屬性設置 |
+label_style  | enum | 項目樣式 |
+label_color  | reference | 項目顏色 |
+sub_text_of_label | int | 此元件為第n個子項目, n為設定的值 |
+array_text | string-array | 文字內容 |
+leading_margin | int | 縮排寬度 |
 
 在需要的layout裡加入 `com.nacro.indent.IndentationTextLayout` :
 ```xml
